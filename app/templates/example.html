@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Titulo</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Adicionando o jQuery -->
+  </head>
+  <body>
+    <h1>Escolha uma marca</h1>
+
+    <!-- Select para marcas -->
+    <select id="marcas" onchange="enviarValor()">
+      <option value="">Selecione uma marca</option>
+      {% for marca in marcas %}
+      <option value="{{ marca['codigo'] }}">{{ marca['nome'] }}</option>
+      {% endfor %}
+    </select>
+
+    <h1>Escolha um modelo</h1>
+
+    <!-- Select para modelos -->
+    <select id="modelos">
+      <option value="">Selecione um modelo</option>
+    </select>
+
+    <script src="{{url_for('static', filename='js/script.js') }}"></script>
+  </body>
+</html>
