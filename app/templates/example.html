@@ -1,28 +1,45 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Titulo</title>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <!-- Adicionando o jQuery -->
-  </head>
-  <body>
-    <h1>Escolha uma marca</h1>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escolha uma marca e modelo</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Seleção de Veículos</h1>
+        </header>
+        <main>
+            <form method="POST" action="{{ url_for('ver_marcas_carros') }}">
+                <section class="form-group">
+                    <label for="marcas">Escolha uma marca:</label>
+                    <select id="marcas" name="marcas" class="select-input" onchange="this.form.submit()">
+                        <option value="" disabled {% if not marca_selecionada %}selected{% endif %}>Selecione uma marca</option>
+                        {% for marca in marcas %}
+                        <option value="{{ marca['codigo'] }}" {% if marca_selecionada == marca['codigo'] %}selected{% endif %}>
+                            {{ marca['nome'] }}
+                        </option>
+                        {% endfor %}
+                    </select>
+                </section>
 
-    <!-- Select para marcas -->
-    <select id="marcas" onchange="enviarValor()">
-      <option value="">Selecione uma marca</option>
-      {% for marca in marcas %}
-      <option value="{{ marca['codigo'] }}">{{ marca['nome'] }}</option>
-      {% endfor %}
-    </select>
-
-    <h1>Escolha um modelo</h1>
-
-    <!-- Select para modelos -->
-    <select id="modelos">
-      <option value="">Selecione um modelo</option>
-    </select>
-
-    <script src="{{url_for('static', filename='js/script.js') }}"></script>
-  </body>
+                <section class="form-group">
+                    <label for="modelos">Escolha um modelo:</label>
+                    <select id="modelos" name="modelos" class="select-input">
+                        <option value="" disabled {% if not modelos %}selected{% endif %}>Selecione um modelo</option>
+                        {% for modelo in modelos %}
+                        <option value="{{ modelo['codigo'] }}">{{ modelo['nome'] }}</option>
+                        {% endfor %}
+                    </select>
+                </section>
+            </form>
+        </main>
+        <footer>
+            <p>© 2025 Veículos FIPE. Todos os direitos reservados.</p>
+        </footer>
+    </div>
+</body>
 </html>
+

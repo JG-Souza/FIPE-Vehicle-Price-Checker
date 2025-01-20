@@ -1,0 +1,88 @@
+:root {
+  --verde: #8aed59;
+  --verde-escuro: #6c9e40;
+  --roxo-claro: #6e7093;
+  --branco: #f4f4f4;
+  --cinza-claro: #e0e0e0;
+  --cinza-escuro: #2e2e2e;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: var(--cinza-escuro); /* Fundo principal escuro */
+  color: var(--branco); /* Texto claro para contraste */
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 600px;
+  margin: 50px auto;
+  background: var(--cinza-claro); /* Fundo claro, mas não branco */
+  padding: 20px;
+  border-radius: 8px;
+  border: 2px solid var(--verde-escuro); /* Adiciona uma borda verde-escuro */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+header h1 {
+  font-size: 2rem;
+  color: var(--verde-escuro); /* Verde-escuro para maior presença no título */
+  border-bottom: 3px solid var(--verde); /* Destaque com linha verde */
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: var(--verde-escuro); /* Verde-escuro para o texto do rótulo */
+}
+
+.select-input {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  border: 2px solid var(--verde-escuro); /* Verde-escuro para bordas */
+  border-radius: 4px;
+  background-color: var(--branco); /* Fundo branco para contraste */
+  color: var(--cinza-escuro); /* Texto escuro */
+  transition: all 0.3s ease;
+}
+
+.select-input:focus {
+  border-color: var(--verde); /* Destaque com verde ao focar */
+  outline: none;
+  box-shadow: 0 0 6px var(--verde); /* Brilho leve ao focar */
+}
+
+footer {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 0.9rem;
+  color: var(--cinza-escuro); /* Texto escuro para contraste */
+}
+
+footer p {
+  margin: 0;
+  background-color: var(--verde-escuro); /* Fundo do rodapé em verde-escuro */
+  color: var(--branco); /* Texto claro no rodapé */
+  padding: 10px;
+  border-radius: 4px;
+  font-weight: bold; /* Texto em destaque */
+}
