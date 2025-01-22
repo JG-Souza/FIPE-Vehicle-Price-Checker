@@ -71,18 +71,23 @@ label {
   box-shadow: 0 0 6px var(--verde); /* Brilho leve ao focar */
 }
 
-footer {
+.resultado {
+  margin-top: 30px;
+  padding: 20px;
+  background-color: var(--verde-escuro); /* Fundo verde para destaque */
+  color: var(--branco); /* Texto branco */
+  border-radius: 8px;
   text-align: center;
-  margin-top: 20px;
-  font-size: 0.9rem;
-  color: var(--cinza-escuro); /* Texto escuro para contraste */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
 
-footer p {
-  margin: 0;
-  background-color: var(--verde-escuro); /* Fundo do rodapé em verde-escuro */
-  color: var(--branco); /* Texto claro no rodapé */
-  padding: 10px;
-  border-radius: 4px;
-  font-weight: bold; /* Texto em destaque */
+.resultado h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: var(--cinza-escuro); /* Texto em destaque escuro */
+}
+
+.resultado p {
+  font-size: 1.2rem;
+  font-weight: bold;
 }

@@ -13,6 +13,3 @@ class ApiService:
         except requests.exceptions.RequestException as e:
             print(f"Erro ao acessar a API: {e}")
             return None
-
-
-# Uma aplicação web para saber o valor de um veículo de acordo com a tabela fipe

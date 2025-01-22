@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Frank | Home</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/style.css') }}"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>Seleção de Veículos</h1>
+      </header>
+      <main>
+        <section class="form-group">
+          <label for="veiculo">Escolha um veículo:</label>
+          <select id="veiculo" class="select-input">
+            <option value="" disabled selected>Selecione um veículo</option>
+            <option value="carros">Carros</option>
+            <option value="motos">Motos</option>
+            <option value="caminhoes">Caminhões</option>
+          </select>
+        </section>
+
+        <section class="form-group">
+          <label for="marcas">Escolha uma marca:</label>
+          <select id="marcas" class="select-input">
+            <option value="" disabled selected>Selecione uma marca</option>
+          </select>
+        </section>
+
+        <section class="form-group">
+          <label for="modelos">Escolha um modelo:</label>
+          <select id="modelos" class="select-input">
+            <option value="" disabled selected>Selecione um modelo</option>
+          </select>
+        </section>
+
+        <section class="form-group">
+          <label for="anos">Escolha um ano:</label>
+          <select id="anos" class="select-input">
+            <option value="" disabled selected>Selecione um ano</option>
+          </select>
+        </section>
+
+        <section id="resultado" class="resultado">
+          <h2>Valor do Veículo</h2>
+          <p id="valor-veiculo">
+            Selecione todas as opções acima para ver o valor.
+          </p>
+        </section>
+      </main>
+    </div>
+    <script src="{{ url_for('static', filename='js/vehicle.js') }}"></script>
+  </body>
+</html>

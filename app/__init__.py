@@ -4,6 +4,6 @@ app = Flask(__name__)
 
 
 
-from app.controllers import controller
+from app.controllers import routes
 
 from app.services import api_service
